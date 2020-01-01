@@ -6,7 +6,9 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 class Tab3 extends React.Component {
     render() {
       return (
+        <View style={styles.container}> 
           <Text>Tab3!</Text>
+        </View>
       );
     }
   }

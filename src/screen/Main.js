@@ -27,6 +27,7 @@ class Main extends Component{
     Tab2: Tab2,
     Tab3: Tab3,
     Settings: Setting,
-  });
+  }
+);
   
 export default createAppContainer(TabNavigator); 
