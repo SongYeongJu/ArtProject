@@ -9,6 +9,7 @@ import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
 import Setting from './Setting';
+import Splash from './Splash';
 
 class Main extends Component{
     constructor(props) {
@@ -27,6 +28,8 @@ class Main extends Component{
     Tab2: Tab2,
     Tab3: Tab3,
     Settings: Setting,
+    Splashs: Splash,
+
   }
 );
   
