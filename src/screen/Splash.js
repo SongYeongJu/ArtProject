@@ -8,7 +8,7 @@ class Splash extends React.Component {
         <View style={styles.container}> 
         <Image
             style={styles.icon}
-            source={require('../image/chat.png')}/>
+            source={require('../image/icon.png')}/>
           <Text style={styles.title}>ARTALK</Text>
         </View>
       );
