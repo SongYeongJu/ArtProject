@@ -34,8 +34,8 @@ class Login extends Component{
           <TextInput 
             style={styles.input}
             onChangeText ={this.handleEmail}
-            placeholder="  ID"
-            placeholderTextColor="white"
+           // placeholder="  ID"
+            //placeholderTextColor="white"
           />
           <View style={styles.blank1}/>
         </View>

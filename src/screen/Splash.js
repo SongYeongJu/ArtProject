@@ -24,7 +24,7 @@ class Splash extends React.Component {
     },
     title : {
       flex:1,
-      textAlignVertical:"center",
+      //textAlignVertical:"center",
       color: 'white',
       fontSize:35,
       fontWeight:'bold',
@@ -45,7 +45,7 @@ class Splash extends React.Component {
       flex:1,
       width:"auto",
       height: "auto",
-      verticalalign: 'middle',
+     // verticalalign: 'middle',
       resizeMode:"contain",
       justifyContent: 'center',
     },

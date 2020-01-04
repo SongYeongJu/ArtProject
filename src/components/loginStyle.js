@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flex:4,
     textAlignVertical:"center",
     textAlign:"left",
-    placeholder:"Email",
+   // placeholder:"Email",
     backgroundColor : "#777777",
     marginHorizontal:15,
     marginVertical:5,
