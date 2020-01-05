@@ -35,7 +35,7 @@ class Main extends React.Component {
               >
                 <Image 
                   style={styles.im} 
-                  source={{uri : item.uri}}/>
+                  source={{uri:item.uri}}/>
               </TouchableOpacity>  
               );      
             }
