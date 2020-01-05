@@ -69,7 +69,7 @@ class SettingsScreen extends React.Component {
                       <View style={styles.activityIndicator}></View>
                       <View style={{ width: 250 }}>
                           <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                              Started following <Text style={{ fontWeight: "400" }}>quminseok</Text> and <Text style={{ fontWeight: "400" }}>Luis Poteer</Text>
+                              Started following <Text style={{ fontWeight: "400" }}>quminseok</Text><Text style={{ fontWeight: "400" }}></Text>
                           </Text>
                       </View>
                   </View>

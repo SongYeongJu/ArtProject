@@ -8,6 +8,7 @@ import Join from './src/screen/Join';
 import Main from './src/screen/Main';
 import Setting from './src/screen/Setting';
 import Splash from './src/screen/Splash';
+import Loading from './src/screen/Loading';
 
 const AppNavigator = createStackNavigator(
   {
@@ -16,9 +17,10 @@ const AppNavigator = createStackNavigator(
     Joins: Join,
     Mains : Main, 
     Settings : Setting, 
+    Loadings: Loading,
   },
   { 
-    initialRouteName: 'Logins',
+    initialRouteName: 'Loadings',
     headerMode: 'none',
   }
 );
