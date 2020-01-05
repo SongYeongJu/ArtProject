@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Text, View, TextInput, ScrollView, TouchableOpacity,StyleSheet } from "react-native";
-import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Note from './Note';
 
 
@@ -17,7 +16,7 @@ export default class Splash extends React.Component{
 
     var notes = this.state.noteArray.map((val,key)=>{
       return <Note key={key} keyval={key} val={val}
-              deleteMethod={ ()=> this.deleteNote(key)} />;
+              deleteMethod={ ()=> this.deleteNote(key)} />
     });
     return (
       <View style = {styles.container}>
@@ -55,14 +54,14 @@ export default class Splash extends React.Component{
         "/"+d.getDate(),
         'note':this.state.noteText
       });
-      this.setState({noteArray: this.state.noteArray})
-      this.setState({noteText: ''})
+      this.setState({noteArray: this.state.noteArray});
+      this.setState({noteText: ''});
     }
   }
 
   deleteNote(key){
     this.state.noteArray.splice(key,1);
-    this.setState({noteArray: this.state.noteArray})
+    this.setState({noteArray: this.state.noteArray});
   }
 
 }
@@ -105,7 +104,7 @@ export default class Splash extends React.Component{
     addButton: {
       position: 'absolute',
       zIndex:11,
-      right:-20,
+      right:20,
       bottom: 90,
       backgroundColor: '#000000',
       width:90,
