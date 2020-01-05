@@ -8,9 +8,9 @@ import { createAppContainer } from 'react-navigation';
 
 class Tab3 extends React.Component {
   _onPress = (item) => {
-//    alert("item : "+ item.key );
-    this.props.navigation.push('ItemInfos');
-  }  
+    //    alert("item : "+ item.key );
+        this.props.navigation.push('ItemInfos', {items:item});
+  }      
     render() {
       try {
         styles.imgSz=Dimensions.get('window').width / 3 - Dimensions.get('window').width * 0.005 * 2;

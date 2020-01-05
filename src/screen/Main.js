@@ -14,7 +14,7 @@ import Splash from './Splash';
 class Main extends React.Component {
   _onPress = (item) => {
 //    alert("item : "+ item.key );
-    this.props.navigation.push('ItemInfos');
+    this.props.navigation.push('ItemInfos', {items:item});
   }  
     render() {
       try {
@@ -31,11 +31,11 @@ class Main extends React.Component {
             renderItem={({ item }) => {
               return (
               <TouchableOpacity
-              onPress={() => this._onPress(item)}
+                onPress={() => this._onPress(item)}
               >
-                  <Image 
-                    style={styles.im} 
-                    source={{uri : item.uri}}/>
+                <Image 
+                  style={styles.im} 
+                  source={{uri : item.uri}}/>
               </TouchableOpacity>  
               );      
             }
