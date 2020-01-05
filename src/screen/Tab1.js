@@ -8,7 +8,7 @@ class Tab1 extends React.Component {
       return (
         <View style={styles.container}> 
           <Text>Tab1!</Text>
-          </View>
+        </View>
       );
     }
   }
