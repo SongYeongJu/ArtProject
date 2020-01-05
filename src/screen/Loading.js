@@ -52,7 +52,7 @@ class Loading extends React.Component {
                 maskElement={
                     <View style={styles.centered}>
                         <Animated.Image
-                            source={require("../image/talk.png")}
+                            source={require("../image/kaw1.jpg")}
                             style={[{width:1000},imageScale]}
                             resizeMode="contain"
                         />
@@ -61,7 +61,7 @@ class Loading extends React.Component {
             >
                 {whiteLayer}
 
-                <Animated.View style={[opacity, styles.centered]}>
+                <Animated.View style={[styles.centered]}>
                     <Text>start!</Text>
                 </Animated.View>    
             </MaskedViewIOS>                
