@@ -9,13 +9,6 @@ import micon8 from '../image/image8.jpg';
 
 
 const data=[
-    {
-      key: 'Devin1', 
-      cost : '1001', 
-      artist : 'song', 
-      name : 'pic1',
-      uri : 'https://facebook.github.io/react-native/img/tiny_logo.png' 
-    },
     {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
     {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
     {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
