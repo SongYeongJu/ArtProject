@@ -45,7 +45,7 @@ class Login extends Component{
           <TextInput 
             style={styles.input}
             onChangeText ={this.handlePassword}
-            secureTextEntry="true"
+            //secureTextEntry="true"
             placeholder="  PW"
             placeholderTextColor="white"
           />

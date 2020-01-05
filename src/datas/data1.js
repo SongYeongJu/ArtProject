@@ -9,17 +9,28 @@ import micon8 from '../image/image8.jpg';
 
 
 const data=[
-    {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
-    {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
-    {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
-    {key: 'Devin5', uri : micon5 , cost : '1005', artist : 'song', name : 'pic1'},
-    {key: 'Devin6', uri : micon6 , cost : '1006', artist : 'song', name : 'pic1'},
-    {key: 'Devin7', uri : micon7 , cost : '1007', artist : 'song', name : 'pic1'},
-    {key: 'Devin8', uri : micon8 , cost : '1008', artist : 'song', name : 'pic1'},
-    {key: 'Devin1', uri : micon1 , cost : '1001', artist : 'song', name : 'pic1'},
-    {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
-    {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
-    {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
-  ];
+  {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
+  {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
+  {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
+  {key: 'Devin5', uri : micon5 , cost : '1005', artist : 'song', name : 'pic1'},
+  {key: 'Devin6', uri : micon6 , cost : '1006', artist : 'song', name : 'pic1'},
+  {key: 'Devin7', uri : micon7 , cost : '1007', artist : 'song', name : 'pic1'},
+  {key: 'Devin8', uri : micon8 , cost : '1008', artist : 'song', name : 'pic1'},
+  {key: 'Devin1', uri : micon1 , cost : '1001', artist : 'song', name : 'pic1'},
+  {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
+  {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
+  {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
+  {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
+  {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
+  {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
+  {key: 'Devin5', uri : micon5 , cost : '1005', artist : 'song', name : 'pic1'},
+  {key: 'Devin6', uri : micon6 , cost : '1006', artist : 'song', name : 'pic1'},
+  {key: 'Devin7', uri : micon7 , cost : '1007', artist : 'song', name : 'pic1'},
+  {key: 'Devin8', uri : micon8 , cost : '1008', artist : 'song', name : 'pic1'},
+  {key: 'Devin1', uri : micon1 , cost : '1001', artist : 'song', name : 'pic1'},
+  {key: 'Devin2', uri : micon2 , cost : '1002', artist : 'song', name : 'pic1'},
+  {key: 'Devin3', uri : micon3 , cost : '1003', artist : 'song', name : 'pic1'},
+  {key: 'Devin4', uri : micon4 , cost : '1004', artist : 'song', name : 'pic1'},
+];
   
   export default data;

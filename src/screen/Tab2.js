@@ -31,8 +31,8 @@ class Tab2 extends React.Component {
               >
                   <Image 
                     style={styles.im} 
-                    source={{uri : item.uri}}/>
-              </TouchableOpacity>  
+                    source={require('../image/image1.jpg')}/>
+                    </TouchableOpacity>  
               );      
             }
           }

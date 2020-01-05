@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ArtProject.song"
+    },
+    "android": {
+      "package": "com.ArtProject.song"
     },
     "description": ""
   }
