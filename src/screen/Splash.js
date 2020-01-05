@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Note from './Note';
 
 
-export default class Splash extends React.ComponentReact.Component{
+export default class Splash extends React.Component{
   constructor(props){
     super(props);
     this.state={
@@ -74,7 +74,7 @@ export default class Splash extends React.ComponentReact.Component{
     header: {
       backgroundColor: '#000000',
       alignItems: 'center',
-      justifyContent: 10,
+      justifyContent: 'center',
       borderBottomWidth:10,
       borderBottomColor: '#ddd',
     },
@@ -103,7 +103,7 @@ export default class Splash extends React.ComponentReact.Component{
       borderTopColor:'#ededed',
     },
     addButton: {
-      position: 'aboulute',
+      position: 'absolute',
       zIndex:11,
       right:-20,
       bottom: 90,
