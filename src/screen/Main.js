@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, FlatList, TouchableOpacity} from "react-native";
 import styles from "../components/flatlistStyle";
-import datas from '../datas/data';
+import datas from '../datas/data1';
 
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
@@ -11,34 +11,10 @@ import Tab3 from './Tab3';
 import Setting from './Setting';
 import Splash from './Splash';
 
-function Item({item}) {
-  try{
-    return (
-      <TouchableOpacity
-      onPress={() => this.props.navigation.navigate('ItemInfos')}
-      >
-        <Image 
-          style={styles.im} 
-          source={require(item.uri)}/>
-      </TouchableOpacity>
-    );
-  }catch(e) {
-    return (
-      <TouchableOpacity
-      onPress={() => this.props.navigation.navigate('ItemInfos')}
-      >
-          <Image 
-            style={styles.im} 
-            source={{uri : item.uri}}/>
-      </TouchableOpacity>
-    );
-  }
-
-}
 class Main extends React.Component {
   _onPress = (item) => {
 //    alert("item : "+ item.key );
-    this.props.navigation.navigate('ItemInfos');
+    this.props.navigation.push('ItemInfos');
   }  
     render() {
       try {
