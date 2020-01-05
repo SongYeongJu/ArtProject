@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
       backgroundColor:'#000000',
       resizeMode:'cover',
     },
+    ttext :{
+      color:'#123123',
+      backgroundColor: '#FFFFFF',
+    },
     items : {
       height: '100%',
       width: '100%',

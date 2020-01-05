@@ -18,11 +18,11 @@ class ItemInfo extends Component{
                 onPress={() => this._onPress()}
               >
               <Image 
-                        style={styles.back}
+                      style={styles.back}
                       source={{uri : backA}}/>
               </TouchableOpacity>
               <Image 
-                        style={styles.im}
+                      style={styles.im}
                       source={{uri : item.uri}}/>
               <View style={styles.container2}>
               <Text style={styles.TitleText}>  -- {item.name} -- </Text>

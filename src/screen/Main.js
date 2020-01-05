@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, FlatList, TouchableOpacity} from "react-native";
+import { View, Image, FlatList, TouchableOpacity, Text} from "react-native";
 import styles from "../components/flatlistStyle";
 import datas from '../datas/data1';
 
@@ -35,7 +35,7 @@ class Main extends React.Component {
               >
                 <Image 
                   style={styles.im} 
-                  source={require('../image/image1.jpg')}/>
+                  source={{uri:item.uri}}/>
               </TouchableOpacity>  
               );      
             }

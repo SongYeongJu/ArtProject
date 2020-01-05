@@ -21,7 +21,7 @@ const AppNavigator = createStackNavigator(
     ItemInfos : ItemInfo,
   },
   { 
-    initialRouteName: 'Logins',
+    initialRouteName: 'Mains',
   }
 );
 export default createAppContainer(AppNavigator);
