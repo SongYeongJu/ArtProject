@@ -1,26 +1,13 @@
 import React, {Component} from 'react';
 import { View, TouchableOpacity, Text, Image} from "react-native";
 import styles from '../components/itemInfoStyle';
-import backA from '../image/back.png';
 
 class ItemInfo extends Component{
-    _onPress = () => {
-        //alert("item : " );
-        this.props.navigation.goBack();
-    }  
-
     render() {
         const { navigation } = this.props;
         const item = navigation.getParam('items');
         return (
             <View style={styles.container}>
-              <TouchableOpacity
-                onPress={() => this._onPress()}
-              >
-              <Image 
-                      style={styles.back}
-                      source={{uri : backA}}/>
-              </TouchableOpacity>
               <Image 
                       style={styles.im}
                       source={{uri : item.uri}}/>
