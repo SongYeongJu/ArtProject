@@ -1,33 +1,81 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { View, Image, FlatList, TouchableOpacity} from "react-native";
+import styles from "../components/flatlistStyle";
+import datas from '../datas/data';
 
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 
-import { AppRegistry, StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from "react-native";
-import styles from "../components/loginStyle";
-import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 import Tab3 from './Tab3';
 import Setting from './Setting';
 import Splash from './Splash';
 
-class Main extends Component{
-    constructor(props) {
-      super(props);
-      this.state={user_id:"", user_pw: ""};
-    }
+function Item({item}) {
+  try{
+    return (
+      <TouchableOpacity
+      onPress={() => this.props.navigation.navigate('ItemInfos')}
+      >
+        <Image 
+          style={styles.im} 
+          source={require(item.uri)}/>
+      </TouchableOpacity>
+    );
+  }catch(e) {
+    return (
+      <TouchableOpacity
+      onPress={() => this.props.navigation.navigate('ItemInfos')}
+      >
+          <Image 
+            style={styles.im} 
+            source={{uri : item.uri}}/>
+      </TouchableOpacity>
+    );
+  }
+
+}
+class Main extends React.Component {
+  _onPress = (item) => {
+//    alert("item : "+ item.key );
+    this.props.navigation.navigate('ItemInfos');
+  }  
     render() {
+      try {
+        styles.imgSz=Dimensions.get('window').width / 3 - Dimensions.get('window').width * 0.005 * 2;
+      }catch(e){
+        styles.imgSz=100;
+      }
       return (
-          <Tab1/>
+        <View style={styles.container}>
+        <FlatList style={styles.container2}
+            numColumns={3}
+            columnWrapperStyle={{justifyContent:'space-between', }}
+            data={datas}
+            renderItem={({ item }) => {
+              return (
+              <TouchableOpacity
+              onPress={() => this._onPress(item)}
+              >
+                  <Image 
+                    style={styles.im} 
+                    source={{uri : item.uri}}/>
+              </TouchableOpacity>  
+              );      
+            }
+          }
+        />
+      </View>
+
       );
     }
-}
+  }
   
   const TabNavigator = createBottomTabNavigator({
     Home: Main,
     Tab2: Tab2,
     Tab3: Tab3,
-    Settings: Setting,
+    Settingss: Setting,
     Splashs: Splash,
 
   }

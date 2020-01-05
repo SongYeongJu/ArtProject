@@ -8,7 +8,6 @@ import Setting from './src/screen/Setting';
 import Splash from './src/screen/Splash';
 import Loading from './src/screen/Loading';
 import ItemInfo from './src/screen/ItemInfo';
-import Tab1 from './src/screen/Tab1';
 
 
 const AppNavigator = createStackNavigator(
@@ -20,7 +19,6 @@ const AppNavigator = createStackNavigator(
     Settings : Setting, 
     Loadings: Loading,
     ItemInfos : ItemInfo,
-    Tab1s: Tab1,
   },
   { 
     initialRouteName: 'Mains',
