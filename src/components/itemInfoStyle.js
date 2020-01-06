@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
       height: '70%',
       backgroundColor:'#FFFFFF',
       resizeMode:'contain',
+      marginVertical: '5%',
     },
     back : {
       width: 50,

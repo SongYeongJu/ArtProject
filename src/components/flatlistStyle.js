@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
       height: imgSz,
       backgroundColor:'#000000',
       resizeMode:'cover',
+      marginBottom: '3.5%',
     },
     ttext :{
       color:'#123123',
@@ -34,7 +35,6 @@ const styles = StyleSheet.create({
       width: '100%',
       marginLeft: '1%',
       marginRight: '1%',
-      paddingHorizontal:'1%',
      },
   });
   
