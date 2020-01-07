@@ -3,6 +3,7 @@ import { View, Image, FlatList, TouchableOpacity, Text} from "react-native";
 import styles from "../components/flatlistStyle";
 import datas from '../datas/data1';
 
+import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 
@@ -51,9 +52,42 @@ class Main extends React.Component {
     Home: Main,
     Tab2: Tab2,
     Tab3: Tab3,
-    Settingss: Setting,
-    Splashs: Splash,
+    profile : Setting,
+    chat: Splash,
 
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, horizontal, tintColor, image }) => {
+        const { routeName } = navigation.state;
+        let iconName;
+        if (routeName === "Home") {
+          iconName = "ios-home";
+        } else if (routeName === "Tab2") {
+          iconName = "ios-person";
+        } else if(routeName === "Tab3") {
+            iconName = "ios-person";
+        } else if (routeName === "chat") {
+          iconName = "ios-chatboxes";
+        } else if (routeName === "profile") {
+          iconName = "ios-person";
+        }
+
+        return (
+          (
+            <Ionicons
+              name={iconName}
+              size={horizontal ? 20 : 25}
+              color={tintColor}
+            />
+          )
+        );
+      },
+      tabBarOptions: {
+        activeTintColor: "#74b9ff",
+        inactiveTintColor: "gray"
+      }
+    })
   }
 );
   

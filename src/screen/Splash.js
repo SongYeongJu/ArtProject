@@ -47,7 +47,7 @@ export default class Splash extends React.Component{
   }
   addNote(){
     if(this.state.noteText){
-      var d=new Date();
+      let d=new Date();
       this.state.noteArray.push({
         'date':d.getFullYear()+
         "/"+(d.getMonth()+1)+
