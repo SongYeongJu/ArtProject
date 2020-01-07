@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
-import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class SettingsScreen extends React.Component {
-  render(){
+    _onPress = () => {
+            alert("click");
+//            this.props.navigation.push('UserListViews');
+    }  
+        
+    render(){
   return (
       <SafeAreaView style={styles.container}>
           <ScrollView showsVerticalScrollIndicator={false}>
@@ -32,18 +37,25 @@ class SettingsScreen extends React.Component {
               </View>
 
               <View style={styles.statsContainer}>
-                  <View style={styles.statsBox}>
-                      <Text style={[styles.text, { fontSize: 24 }]}>10</Text>
+                  <TouchableOpacity 
+                        onPress={() => this._onPress()}
+                        style={styles.statsBox}>
+                      <Text 
+                        style={[styles.text, { fontSize: 24 }]}>10</Text>
                       <Text style={[styles.text, styles.subText]}>Likes</Text>
-                  </View>
-                  <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
+                  </TouchableOpacity>
+                  <TouchableOpacity 
+                    style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}
+                        onPress={() => this._onPress()}>
                       <Text style={[styles.text, { fontSize: 24 }]}>10</Text>
                       <Text style={[styles.text, styles.subText]}>Upload</Text>
-                  </View>
-                  <View style={styles.statsBox}>
+                  </TouchableOpacity>
+                  <TouchableOpacity 
+                    style={styles.statsBox}
+                    onPress={() => this._onPress()}>
                       <Text style={[styles.text, { fontSize: 24 }]}>10</Text>
                       <Text style={[styles.text, styles.subText]}>Sell</Text>
-                  </View>
+                  </TouchableOpacity>
               </View>
 
               <View style={{ marginTop: 32 }}>
@@ -163,7 +175,9 @@ const styles = StyleSheet.create({
   },
   statsBox: {
       alignItems: "center",
-      flex: 1
+      flex: 1,
+      margin: 8,
+      padding: 8,
   },
   mediaImageContainer: {
       width: 180,
