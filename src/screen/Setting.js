@@ -5,10 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class SettingsScreen extends React.Component {
     _onPress = () => {
-            alert("click");
-//            this.props.navigation.push('UserListViews');
+        //    alert("item : "+ item.key );
+        this.props.navigation.push('UserListViews');
     }  
-        
+                
     render(){
   return (
       <SafeAreaView style={styles.container}>
