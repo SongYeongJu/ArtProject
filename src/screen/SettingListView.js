@@ -16,9 +16,15 @@ export default class SettingListView extends Component {
  
     return (
  
-      <View style={styles.MainContainer}>
- 
-        <Text style={{ marginTop: 40, fontSize: 20 }}>Settings Activity Screen</Text>
+      <View style={styles.container}>
+
+        <View style={styles.titleBar}>
+              <TouchableOpacity onPress={() => this.props.navigation.push('Settings')}>
+                  <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
+              </TouchableOpacity>
+        </View>
+
+        <Text style={styles.subText}>Settings Activity Screen</Text>
  
         <TouchableOpacity
           style={styles.button}
@@ -100,17 +106,14 @@ const TabNavigator = createBottomTabNavigator({
 }
 );
 const styles = StyleSheet.create({
- 
-  MainContainer: {
- 
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5fcff',
-    padding: 11
- 
+  container: {
+      flex: 1,
+      backgroundColor: "#fff"
   },
- 
+  text: {
+      fontFamily: "HelveticaNeue",
+      color: "#52575D"
+  },
   button: {
     alignItems: 'center',
     backgroundColor: '#43A047',
@@ -118,11 +121,21 @@ const styles = StyleSheet.create({
     width: 280,
     marginTop: 12,
   },
- 
-  text: {
- 
-    color: '#fff'
-  }
+  
+  titleBar: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 70,
+      marginHorizontal: 16
+  },
+  subText: {
+      alignItems: 'center',
+      fontSize: 12,
+      color: "#AEB5BC",
+      textTransform: "uppercase",
+      fontWeight: "500"
+  },
   
  
 });
+ 
