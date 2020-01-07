@@ -22,17 +22,15 @@ class SettingsScreen extends React.Component {
                   <View style={styles.profileImage}>
                       <Image source={require("../image/jackson.jpg")} style={styles.image} resizeMode="center"></Image>
                   </View>
-                  <View style={styles.dm}>
-                      <MaterialIcons name="chat" size={18} color="#DFD8C8"></MaterialIcons>
-                  </View>
-                  <View style={styles.active}></View>
+                
+                  
                   <View style={styles.add}>
-                      <Ionicons name="ios-add" size={48} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
+                      <Ionicons name="ios-add" size={18} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
                   </View>
               </View>
 
               <View style={styles.infoContainer}>
-                  <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Quminsoek</Text>
+                  <Text style={[styles.text, { fontWeight: "200", fontSize: 20 }]}>Quminsoek</Text>
                   <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Art lover</Text>
               </View>
 
@@ -70,10 +68,6 @@ class SettingsScreen extends React.Component {
                           <Image source={require("../image/ba3.jpg")} style={styles.image} resizeMode="cover"></Image>
                       </View>
                   </ScrollView>
-                  <View style={styles.mediaCount}>
-                      <Text style={[styles.text, { fontSize: 24, color: "#DFD8C8", fontWeight: "300" }]}>70</Text>
-                      <Text style={[styles.text, { fontSize: 12, color: "#DFD8C8", textTransform: "uppercase" }]}>Media</Text>
-                  </View>
               </View>
               <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
               <View style={{ alignItems: "center" }}>
@@ -127,8 +121,8 @@ const styles = StyleSheet.create({
       fontWeight: "500"
   },
   profileImage: {
-      width: 200,
-      height: 200,
+      width: 100,
+      height: 100,
       borderRadius: 100,
       overflow: "hidden"
   },
@@ -136,8 +130,8 @@ const styles = StyleSheet.create({
       backgroundColor: "#41444B",
       position: "absolute",
       top: 20,
-      width: 40,
-      height: 40,
+      width: 20,
+      height: 20,
       borderRadius: 20,
       alignItems: "center",
       justifyContent: "center"
@@ -157,8 +151,8 @@ const styles = StyleSheet.create({
       position: "absolute",
       bottom: 0,
       right: 0,
-      width: 60,
-      height: 60,
+      width: 30,
+      height: 30,
       borderRadius: 30,
       alignItems: "center",
       justifyContent: "center"
