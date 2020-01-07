@@ -14,8 +14,12 @@ class SettingsScreen extends React.Component {
       <SafeAreaView style={styles.container}>
           <ScrollView showsVerticalScrollIndicator={false}>
               <View style={styles.titleBar}>
+              <TouchableOpacity onPress={() => this._onPress()}>
                   <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => this._onPress()}>
                   <Ionicons name="ios-settings" size={24} color="#52575D"></Ionicons>
+              </TouchableOpacity>
               </View>
 
               <View style={{ alignSelf: "center" }}>
@@ -25,7 +29,9 @@ class SettingsScreen extends React.Component {
                 
                   
                   <View style={styles.add}>
+                    <TouchableOpacity onPress={() => this._onPress()}>
                       <Ionicons name="ios-add" size={18} color="#DFD8C8" style={{ marginTop: 6, marginLeft: 2 }}></Ionicons>
+                    </TouchableOpacity>
                   </View>
               </View>
 
@@ -69,26 +75,9 @@ class SettingsScreen extends React.Component {
                       </View>
                   </ScrollView>
               </View>
-              <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
-              <View style={{ alignItems: "center" }}>
-                  <View style={styles.recentItem}>
-                      <View style={styles.activityIndicator}></View>
-                      <View style={{ width: 250 }}>
-                          <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                              Started following <Text style={{ fontWeight: "400" }}>quminseok</Text><Text style={{ fontWeight: "400" }}></Text>
-                          </Text>
-                      </View>
-                  </View>
-
-                  <View style={styles.recentItem}>
-                      <View style={styles.activityIndicator}></View>
-                      <View style={{ width: 250 }}>
-                          <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                              Started following <Text style={{ fontWeight: "400" }}>quminseok</Text>
-                          </Text>
-                      </View>
-                  </View>
-              </View>
+              
+                  
+             
           </ScrollView>
       </SafeAreaView>
   );
