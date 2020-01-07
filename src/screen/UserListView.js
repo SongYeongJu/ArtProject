@@ -15,12 +15,14 @@ class UserListView extends React.Component {
             data={datas}
             renderItem={({ item }) => {
               return (
-              <TouchableOpacity>
+              <TouchableOpacity
+                style={styles.items}
+              >
                   <Image 
                     style={styles.im} 
                     source={{uri:item.uri}}/>
                 <Text style={styles.ttext}>{item.name}</Text>
-                <Text>{item.artist}</Text>
+                <Text style={styles.ttext}>{item.artist}</Text>
                     </TouchableOpacity>  
               );      
             }

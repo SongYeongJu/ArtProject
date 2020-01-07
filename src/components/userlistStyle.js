@@ -16,28 +16,31 @@ const styles = StyleSheet.create({
     titleText : {
         width: '100%',
         textAlign:'center',
+//        backgroundColor:'#EEEEEE',
     },
     items : {
-      height: '100%',
-      width: '100%',
-      flex: 0.33,
+        marginHorizontal : 5,
+        marginVertical : 2.5,
+        backgroundColor:'#FFFFFF',
     },
     container: {
       height: '100%',
       width: '100%',
-      alignItems:'flex-start',
+      alignItems:'center',
       paddingTop: 22,
+      backgroundColor:'#FFEEEE',
     },
     container2: {
-      height: '100%',
-      width: '100%',
-      marginLeft: '1%',
-      marginRight: '1%',
-     },
-     ttext : {
+        height: '100%',
         width: '100%',
+        marginLeft: '1%',
+        marginRight: '1%',
+       },
+    ttext : {
+        width: '100%',
+        fontSize:20,
         textAlign:'center',
-        color:'#FFFFFF',
+        color:'#333333',
      }
   });
   

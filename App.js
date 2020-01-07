@@ -19,10 +19,11 @@ const AppNavigator = createStackNavigator(
     Settings : Setting, 
     Loadings: Loading,
     ItemInfos : ItemInfo,
-    UserListViews:UserListView,
+    UserListViews : UserListView,
   },
   { 
     initialRouteName: 'Mains',
+    headerMode : 'none',
   }
 );
 export default createAppContainer(AppNavigator);
