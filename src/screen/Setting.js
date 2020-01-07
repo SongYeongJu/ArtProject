@@ -3,21 +3,23 @@ import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-n
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+
 class SettingsScreen extends React.Component {
     _onPress = () => {
         //    alert("item : "+ item.key );
         this.props.navigation.push('UserListViews');
     }  
+    
                 
     render(){
   return (
       <SafeAreaView style={styles.container}>
           <ScrollView showsVerticalScrollIndicator={false}>
               <View style={styles.titleBar}>
-              <TouchableOpacity onPress={() => this._onPress()}>
+              <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
                   <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => this._onPress()}>
+              <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
                   <Ionicons name="ios-settings" size={24} color="#52575D"></Ionicons>
               </TouchableOpacity>
               </View>

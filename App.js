@@ -9,6 +9,12 @@ import Splash from './src/screen/Splash';
 import Loading from './src/screen/Loading';
 import ItemInfo from './src/screen/ItemInfo';
 import UserListView from './src/screen/UserListView';
+import SettingListView from './src/screen/SettingListView';
+import PersonInfo from './src/screen/PersonInfo';
+import notice from './src/screen/notice';
+import point from './src/screen/point';
+import help from './src/screen/help';
+
 
 const AppNavigator = createStackNavigator(
   {
@@ -20,6 +26,11 @@ const AppNavigator = createStackNavigator(
     Loadings: Loading,
     ItemInfos : ItemInfo,
     UserListViews : UserListView,
+    SettingListViews : SettingListView,
+    PersonInfos : PersonInfo,
+    notices : notice,
+    points : point,
+    helps : help,
   },
   { 
     initialRouteName: 'Mains',

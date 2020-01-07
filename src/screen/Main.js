@@ -53,7 +53,7 @@ class Main extends React.Component {
     Tab2: Tab2,
     Tab3: Tab3,
     profile : Setting,
-    chat: Splash,
+    Splashs: Splash,
 
   },
   {
@@ -67,7 +67,7 @@ class Main extends React.Component {
           iconName = "ios-person";
         } else if(routeName === "Tab3") {
             iconName = "ios-person";
-        } else if (routeName === "chat") {
+        } else if (routeName === "Splashs") {
           iconName = "ios-chatboxes";
         } else if (routeName === "profile") {
           iconName = "ios-person";
