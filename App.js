@@ -14,6 +14,7 @@ import PersonInfo from './src/screen/PersonInfo';
 import notice from './src/screen/notice';
 import point from './src/screen/point';
 import help from './src/screen/help';
+import buy from './src/screen/Buy';
 
 
 const AppNavigator = createStackNavigator(
@@ -31,6 +32,7 @@ const AppNavigator = createStackNavigator(
     notices : notice,
     points : point,
     helps : help,
+    buys:buy,
   },
   { 
     initialRouteName: 'Mains',

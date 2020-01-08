@@ -33,6 +33,14 @@ const styles = StyleSheet.create({
       alignItems:'center',
       backgroundColor:'#FFFFFF',
      },
+     button: {
+      width: '100%',
+      alignItems: 'center',
+      backgroundColor: '#a9a9a9',
+      padding: 10,
+      width: 100,
+      marginTop: 12,
+    },
   });
   
 export default styles;

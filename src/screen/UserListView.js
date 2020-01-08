@@ -21,9 +21,14 @@ class UserListView extends React.Component {
                   <Image 
                     style={styles.im} 
                     source={{uri:item.uri}}/>
+              <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => this.props.navigation.push('buys')}>
+                  <Text style={styles.text}>Buy</Text>
+              </TouchableOpacity>
                 <Text style={styles.ttext}>{item.name}</Text>
                 <Text style={styles.ttext}>{item.artist}</Text>
-                    </TouchableOpacity>  
+              </TouchableOpacity>  
               );      
             }
           }

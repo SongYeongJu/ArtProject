@@ -19,42 +19,23 @@ export default class SettingListView extends Component {
       <View style={styles.container}>
 
         <View style={styles.titleBar}>
-              <TouchableOpacity onPress={() => this.props.navigation.push('Settings')}>
+              <TouchableOpacity onPress={() => this.props.navigation.push('Mains')}>
                   <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
               </TouchableOpacity>
         </View>
 
         <Text style={styles.subText}>Settings Activity Screen</Text>
- 
+        
+        <Text style={styles.text}>신한 110437899521 구민석</Text>
+
         <TouchableOpacity
           style={styles.button}
-          onPress={() => this.props.navigation.push('notices')}>
+          onPress={() => this.props.navigation.push('Mains')}>
  
-          <Text style={styles.text}>개인정보</Text>
- 
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.props.navigation.push('notices')}>
- 
-          <Text style={styles.text}>공지사항</Text>
+          <Text style={styles.text}>무통장결제</Text>
  
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.props.navigation.push('notices')}>
- 
-          <Text style={styles.text}>포인트</Text>
- 
-        </TouchableOpacity>
- 
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.props.navigation.push('notices')}>
- 
-          <Text style={styles.text}>문의 및 건의</Text>
- 
-        </TouchableOpacity>
+       
  
       </View>
  

@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     container: {
       height: '100%',
       width: '100%',
+      justifyContent: 'center',
       alignItems:'center',
       paddingTop: 22,
       backgroundColor:'#FFEEEE',
@@ -41,7 +42,16 @@ const styles = StyleSheet.create({
         fontSize:20,
         textAlign:'center',
         color:'#333333',
-     }
+     },
+     button: {
+      height: '100%',
+      width: '100%',
+      alignItems: 'center',
+      backgroundColor: '#a9a9a9',
+      padding: 10,
+      width: 200,
+      marginTop: 12,
+    },
   });
   
 export default styles;

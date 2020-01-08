@@ -12,6 +12,11 @@ class ItemInfo extends Component{
                       style={styles.im}
                       source={{uri : item.uri}}/>
               <View style={styles.container2}>
+              <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => this.props.navigation.push('buys')}>
+                  <Text style={styles.text}>Buy</Text>
+              </TouchableOpacity>
               <Text style={styles.TitleText}>  -- {item.name} -- </Text>
               <Text style={styles.text2}>  Artist  {item.artist}  </Text>
                   <Text style={styles.text2}>  {item.cost} 원</Text>  
