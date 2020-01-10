@@ -14,13 +14,16 @@ class SettingsScreen extends React.Component {
     render(){
   return (
       <SafeAreaView style={styles.container}>
+           <View style={styles.header}>
+           <Text style={styles.item}><TouchableOpacity onPress={() => this.props.navigation.push('Mains')}>
+                  <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
+              </TouchableOpacity></Text>
+                    <Text style={styles.headerTitle}>Porfile</Text>
+            <Text style={styles.headerTitle}><TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
+                  <Ionicons name="ios-settings" size={24} color="#000000"></Ionicons>
+              </TouchableOpacity></Text>
+            </View>
           <ScrollView showsVerticalScrollIndicator={false}>
-              <View style={styles.titleBar}>
-              <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
-              <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
-                  <Ionicons name="ios-settings" size={24} color="#52575D"></Ionicons>
-              </TouchableOpacity>
-              </View>
 
               <View style={{ alignSelf: "center" }}>
                   <View style={styles.profileImage}>
@@ -86,7 +89,28 @@ class SettingsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      backgroundColor: "#000000"
+      backgroundColor: "#EBECF4"
+  },
+  header: {
+    paddingTop: 64,
+    paddingBottom: 16,
+    backgroundColor: "#FFF",
+    flexDirection:'row',
+    justifyContent: "space-between",
+    borderBottomWidth: 1,
+    borderBottomColor: "#EBECF4",
+    shadowColor: "#454D65",
+    shadowOffset: { height: 5 },
+    shadowRadius: 15,
+    shadowOpacity: 0.2,
+    zIndex: 10
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: "500"
+  },
+  item:{
+    color: "#000000"
   },
   text: {
       fontFamily: "HelveticaNeue",

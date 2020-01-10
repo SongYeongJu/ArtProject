@@ -17,14 +17,14 @@ export default class SettingListView extends Component {
     return (
  
       <View style={styles.container}>
-
-        <View style={styles.titleBar}>
-              <TouchableOpacity onPress={() => this.props.navigation.push('Settings')}>
+        
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}><TouchableOpacity onPress={() => this.props.navigation.push('Settings')}>
                   <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
-              </TouchableOpacity>
+              </TouchableOpacity></Text>
+          <Text style={styles.headerTitle}>Setting</Text>
+          <Text style={styles.headerTitle}></Text>
         </View>
-
-        <Text style={styles.subText}>Settings Activity Screen</Text>
  
         <TouchableOpacity
           style={styles.button}
@@ -107,8 +107,26 @@ const TabNavigator = createBottomTabNavigator({
 );
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: "#fff"
+    flex: 1,
+    backgroundColor: "#EBECF4"
+  },
+  header: {
+    paddingTop: 64,
+    paddingBottom: 16,
+    backgroundColor: "#FFF",
+    flexDirection:'row',
+    justifyContent: "space-between",
+    borderBottomWidth: 1,
+    borderBottomColor: "#EBECF4",
+    shadowColor: "#454D65",
+    shadowOffset: { height: 5 },
+    shadowRadius: 15,
+    shadowOpacity: 0.2,
+    zIndex: 10
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: "500"
   },
   text: {
       fontFamily: "HelveticaNeue",
@@ -128,14 +146,6 @@ const styles = StyleSheet.create({
       marginTop: 70,
       marginHorizontal: 16
   },
-  subText: {
-      alignItems: 'center',
-      fontSize: 12,
-      color: "#AEB5BC",
-      textTransform: "uppercase",
-      fontWeight: "500"
-  },
-  
  
 });
  

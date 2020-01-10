@@ -1,132 +1,132 @@
-import React, {Component} from 'react';
-import { Text, View, TextInput, ScrollView, TouchableOpacity,StyleSheet } from "react-native";
-import NoticeNote from './NoticeNote';
+import React from "react";
+import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import moment from "moment";
 
-export default class notice extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      noteArray: [],
-      noteText: '',
+// temporary data until we pull from db
+const notices = [
+    {
+        id: "1",
+        text:
+            "qminseok zzang",
+        timestamp: "2020.1.1",
+    },
+    {
+        id: "2",
+        text:
+            "minseok zzang",
+        timestamp: "2020.1.2",
+    },
+    {
+        id: "3",
+        text:
+            "seok zzang",
+        timestamp: "2020.1.3",
+    },
+    {
+        id: "4",
+        text:
+            "great",
+        timestamp: "2020.1.4",
     }
-  }
+];
 
-  render() {
+export default class HomeScreen extends React.Component {
+    renderPost = post => {
+        return (
+          //  <Text style={styles.timestamp}>{moment(post.timestamp).fromNow()}</Text> Line 56
+            <View style={styles.feedItem}>
+                
+                <View style={{ flex: 1 }}>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                        <View>
+                            <Text style={styles.name}>ARTALK</Text>
+                            <Text style={styles.timestamp}>{post.timestamp}</Text>
+                        </View>
+                    </View>
+                    <Text style={styles.post}>{post.text}</Text>
+                </View>
+            </View>
+        );
+    };
 
-    let notes = this.state.noteArray.map((val,key)=>{
-      return <NoticeNote key={key} keyval={key} val={val}
-              deleteMethod={ ()=> this.deleteNote(key)} />
-    });
-    return (
-      <View style = {styles.container}>
-        <View style={styles.titleBar}>
-              <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
-                  <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
-              </TouchableOpacity>
-        </View>
-        <View style={styles.header}>
-          <Text style={styles.headerText}> -Notice-</Text>
-        </View>
-        
-        <ScrollView style={styles.scrollContainer}>
-          {notes}
-        </ScrollView>
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.header}>
+                    <Text style={styles.headerTitle}>Notice</Text>
+                </View>
 
-        <View style={styles.footer}>
-
-          <TextInput
-            style={styles.textInput}
-            onChangeText={(noteText)=>this.setState({noteText})}
-            value={this.state.noteText}
-            placeholder='>notice'
-            placeholderTextColor='white'
-            underlineColorAndroid='transparent'>
-          </TextInput>
-      </View>
-      <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
-      <Text style={styles.addButtonText}>+</Text>
-      </TouchableOpacity>
-      </View>
-    );
-  }
-  addNote(){
-    if(this.state.noteText){
-      let d=new Date();
-      this.state.noteArray.push({
-        'date':d.getFullYear()+
-        "/"+(d.getMonth()+1)+
-        "/"+d.getDate(),
-        'note':this.state.noteText
-      });
-      this.setState({noteArray: this.state.noteArray});
-      this.setState({noteText: ''});
+                <FlatList
+                    style={styles.feed}
+                    data={notices}
+                    renderItem={({ item }) => this.renderPost(item)}
+                    keyExtractor={item => item.id}
+                    showsVerticalScrollIndicator={false}
+                ></FlatList>
+            </View>
+        );
     }
-  }
-
-  deleteNote(key){
-    this.state.noteArray.splice(key,1);
-    this.setState({noteArray: this.state.noteArray});
-  }
-
 }
 
-  const styles = StyleSheet.create({
-    container:{
-      flex:1,
-    },
-    titleBar: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginTop: 70,
-        marginHorizontal: 16
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#EBECF4"
     },
     header: {
-      backgroundColor: '#000000',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderBottomWidth:10,
-      borderBottomColor: '#ddd',
+        paddingTop: 64,
+        paddingBottom: 16,
+        backgroundColor: "#FFF",
+        alignItems: "center",
+        justifyContent: "center",
+        borderBottomWidth: 1,
+        borderBottomColor: "#EBECF4",
+        shadowColor: "#454D65",
+        shadowOffset: { height: 5 },
+        shadowRadius: 15,
+        shadowOpacity: 0.2,
+        zIndex: 10
     },
-    headerText: {
-      color: 'white',
-      fontSize: 18,
-      padding:  26,
+    headerTitle: {
+        fontSize: 20,
+        fontWeight: "500"
     },
-    scrollContainer:{
-      flex:1,
-      marginBottom: 100,
+    feed: {
+        marginHorizontal: 16
     },
-    footer: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      zIndex: 10,
+    feedItem: {
+        backgroundColor: "#FFF",
+        borderRadius: 5,
+        padding: 8,
+        flexDirection: "row",
+        marginVertical: 8
     },
-    textInput: {
-      alignSelf: 'stretch',
-      color: '#fff',
-      padding: 20,
-      backgroundColor: '#252525',
-      borderTopWidth:2,
-      borderTopColor:'#ededed',
+    avatar: {
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        marginRight: 16
     },
-    addButton: {
-      position: 'absolute',
-      zIndex:11,
-      right:20,
-      bottom: 90,
-      backgroundColor: '#000000',
-      width:90,
-      height:90,
-      borderRadius: 50,
-      alignItems: 'center',
-      justifyContent: 'center',
-      elevation: 8,
+    name: {
+        fontSize: 15,
+        fontWeight: "500",
+        color: "#454D65"
     },
-    addButtonText: {
-      color: '#fff',
-      fontSize: 24,
+    timestamp: {
+        fontSize: 11,
+        color: "#C4C6CE",
+        marginTop: 4
+    },
+    post: {
+        marginTop: 16,
+        fontSize: 14,
+        color: "#838899"
+    },
+    postImage: {
+        width: undefined,
+        height: 150,
+        borderRadius: 5,
+        marginVertical: 16
     }
-  });
+});
