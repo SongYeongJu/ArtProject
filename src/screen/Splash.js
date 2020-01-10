@@ -1,123 +1,151 @@
-import React, {Component} from 'react';
-import { Text, View, TextInput, ScrollView, TouchableOpacity,StyleSheet } from "react-native";
-import Note from './Note';
+import React from "react";
+import { View, Text, StyleSheet, Image, FlatList } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import moment from "moment";
 
-
-export default class Splash extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      noteArray: [],
-      noteText: '',
+// temporary data until we pull from db
+const posts = [
+    {
+        id: "1",
+        name: "Joe McKay",
+        text:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        timestamp: 1569109273726,
+        avatar: require("../image/ba1.jpg"),
+        image: require("../image/ba2.jpg")
+    },
+    {
+        id: "2",
+        name: "Karyn Kim",
+        text:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        timestamp: 1569109273726,
+        avatar: require("../image/ba1.jpg"),
+        image: require("../image/ba2.jpg")
+    },
+    {
+        id: "3",
+        name: "Emerson Parsons",
+        text:
+            "Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant.",
+        timestamp: 1569109273726,
+        avatar: require("../image/ba1.jpg"),
+        image: require("../image/ba2.jpg")
+    },
+    {
+        id: "4",
+        name: "Kathie Malone",
+        text:
+            "At varius vel pharetra vel turpis nunc eget lorem. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Adipiscing tristique risus nec feugiat in fermentum.",
+        timestamp: 1569109273726,
+        avatar: require("../image/ba1.jpg"),
+        image: require("../image/ba2.jpg")
     }
-  }
+];
 
-  render() {
+export default class HomeScreen extends React.Component {
+    renderPost = post => {
+        return (
+          //  <Text style={styles.timestamp}>{moment(post.timestamp).fromNow()}</Text> Line 56
+            <View style={styles.feedItem}>
+                <Image source={post.avatar} style={styles.avatar} />
+                <View style={{ flex: 1 }}>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                        <View>
+                            <Text style={styles.name}>{post.name}</Text>
+                          
+                        </View>
 
-    var notes = this.state.noteArray.map((val,key)=>{
-      return <Note key={key} keyval={key} val={val}
-              deleteMethod={ ()=> this.deleteNote(key)} />
-    });
-    return (
-      <View style = {styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}> -Art-</Text>
-        </View>
-        
-        <ScrollView style={styles.scrollContainer}>
-        <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
-          {notes}
-        </TouchableOpacity>
-        </ScrollView>
+                        <Ionicons name="ios-more" size={24} color="#73788B" />
+                    </View>
+                    <Text style={styles.post}>{post.text}</Text>
+                    <Image source={post.image} style={styles.postImage} resizeMode="cover" />
+                    <View style={{ flexDirection: "row" }}>
+                        <Ionicons name="ios-heart-empty" size={24} color="#73788B" style={{ marginRight: 16 }} />
+                        <Ionicons name="ios-chatboxes" size={24} color="#73788B" />
+                    </View>
+                </View>
+            </View>
+        );
+    };
 
-        <View style={styles.footer}>
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.header}>
+                    <Text style={styles.headerTitle}>Feed</Text>
+                </View>
 
-          <TextInput
-            style={styles.textInput}
-            onChangeText={(noteText)=>this.setState({noteText})}
-            value={this.state.noteText}
-            placeholder='>note'
-            placeholderTextColor='white'
-            underlineColorAndroid='transparent'>
-          </TextInput>
-      </View>
-      <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
-      <Text style={styles.addButtonText}>+</Text>
-      </TouchableOpacity>
-      </View>
-    );
-  }
-  addNote(){
-    if(this.state.noteText){
-      let d=new Date();
-      this.state.noteArray.push({
-        'date':d.getFullYear()+
-        "/"+(d.getMonth()+1)+
-        "/"+d.getDate(),
-        'note':this.state.noteText
-      });
-      this.setState({noteArray: this.state.noteArray});
-      this.setState({noteText: ''});
+                <FlatList
+                    style={styles.feed}
+                    data={posts}
+                    renderItem={({ item }) => this.renderPost(item)}
+                    keyExtractor={item => item.id}
+                    showsVerticalScrollIndicator={false}
+                ></FlatList>
+            </View>
+        );
     }
-  }
-
-  deleteNote(key){
-    this.state.noteArray.splice(key,1);
-    this.setState({noteArray: this.state.noteArray});
-  }
-
 }
 
-  const styles = StyleSheet.create({
-    container:{
-      flex:1,
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#EBECF4"
     },
     header: {
-      backgroundColor: '#000000',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderBottomWidth:10,
-      borderBottomColor: '#ddd',
+        paddingTop: 64,
+        paddingBottom: 16,
+        backgroundColor: "#FFF",
+        alignItems: "center",
+        justifyContent: "center",
+        borderBottomWidth: 1,
+        borderBottomColor: "#EBECF4",
+        shadowColor: "#454D65",
+        shadowOffset: { height: 5 },
+        shadowRadius: 15,
+        shadowOpacity: 0.2,
+        zIndex: 10
     },
-    headerText: {
-      color: 'white',
-      fontSize: 18,
-      padding:  26,
+    headerTitle: {
+        fontSize: 20,
+        fontWeight: "500"
     },
-    scrollContainer:{
-      flex:1,
-      marginBottom: 100,
+    feed: {
+        marginHorizontal: 16
     },
-    footer: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      zIndex: 10,
+    feedItem: {
+        backgroundColor: "#FFF",
+        borderRadius: 5,
+        padding: 8,
+        flexDirection: "row",
+        marginVertical: 8
     },
-    textInput: {
-      alignSelf: 'stretch',
-      color: '#fff',
-      padding: 20,
-      backgroundColor: '#252525',
-      borderTopWidth:2,
-      borderTopColor:'#ededed',
+    avatar: {
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        marginRight: 16
     },
-    addButton: {
-      position: 'absolute',
-      zIndex:11,
-      right:20,
-      bottom: 90,
-      backgroundColor: '#000000',
-      width:90,
-      height:90,
-      borderRadius: 50,
-      alignItems: 'center',
-      justifyContent: 'center',
-      elevation: 8,
+    name: {
+        fontSize: 15,
+        fontWeight: "500",
+        color: "#454D65"
     },
-    addButtonText: {
-      color: '#fff',
-      fontSize: 24,
+    timestamp: {
+        fontSize: 11,
+        color: "#C4C6CE",
+        marginTop: 4
+    },
+    post: {
+        marginTop: 16,
+        fontSize: 14,
+        color: "#838899"
+    },
+    postImage: {
+        width: undefined,
+        height: 150,
+        borderRadius: 5,
+        marginVertical: 16
     }
-  });
+});
