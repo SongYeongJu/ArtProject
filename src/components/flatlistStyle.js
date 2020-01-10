@@ -26,10 +26,28 @@ const styles = StyleSheet.create({
     container: {
       height: '100%',
       width: '100%',
-      alignItems:'flex-start',
+      //alignItems:'flex-start',
       paddingTop: 22,
-      backgroundColor:'#000000',
+      backgroundColor:'#EBECF4',
     },
+    header: {
+      paddingTop: 64,
+      paddingBottom: 16,
+      backgroundColor: "#FFF",
+      alignItems: "center",
+      justifyContent: "center",
+      borderBottomWidth: 1,
+      borderBottomColor: "#EBECF4",
+      shadowColor: "#454D65",
+      shadowOffset: { height: 5 },
+      shadowRadius: 15,
+      shadowOpacity: 0.2,
+      zIndex: 10
+  },
+  headerTitle: {
+      fontSize: 20,
+      fontWeight: "500"
+  },
     container2: {
       height: '100%',
       width: '100%',

@@ -25,6 +25,9 @@ class Main extends React.Component {
       }
       return (
         <View style={styles.container}>
+          <View style={styles.header}>           
+               <Text style={styles.headerTitle}>Home</Text>
+        </View>
         <FlatList style={styles.container2}
             numColumns={3}
             columnWrapperStyle={{justifyContent:'space-between', }}
