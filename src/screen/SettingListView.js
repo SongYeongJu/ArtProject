@@ -18,12 +18,8 @@ export default class SettingListView extends Component {
  
       <View style={styles.container}>
         
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}><TouchableOpacity onPress={() => this.props.navigation.push('Settings')}>
-                  <Ionicons name="ios-arrow-back" size={24} color="#000000"></Ionicons>
-              </TouchableOpacity></Text>
-          <Text style={styles.headerTitle}>Setting</Text>
-          <Text style={styles.headerTitle}></Text>
+        <View style={styles.header}>           
+               <Text style={styles.headerTitle}>Setting</Text>
         </View>
  
         <TouchableOpacity
@@ -114,8 +110,8 @@ const styles = StyleSheet.create({
     paddingTop: 64,
     paddingBottom: 16,
     backgroundColor: "#FFF",
-    flexDirection:'row',
-    justifyContent: "space-between",
+    alignItems: "center",
+    justifyContent: "center",
     borderBottomWidth: 1,
     borderBottomColor: "#EBECF4",
     shadowColor: "#454D65",
@@ -123,11 +119,11 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
     shadowOpacity: 0.2,
     zIndex: 10
-  },
-  headerTitle: {
+},
+headerTitle: {
     fontSize: 20,
     fontWeight: "500"
-  },
+},
   text: {
       fontFamily: "HelveticaNeue",
       color: "#52575D"
