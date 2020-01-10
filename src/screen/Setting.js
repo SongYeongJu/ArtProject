@@ -16,12 +16,8 @@ class SettingsScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.header}>
                
-        <TouchableOpacity onPress={() => this.props.navigation.push('Mains')}>
-        <Text style={styles.headerTitle}><Ionicons name="ios-arrow-back"size={24} color="#DFD8C8"></Ionicons></Text>
-        </TouchableOpacity>       
-                   
-                   
-        <Text style={styles.headerTitle}>Porfile</Text>
+        <Text style={styles.headerTitle}></Text>
+        <Text style={styles.headerTitle}>    Porfile</Text>
 
         <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
         <Text style={styles.headerTitle}><Ionicons name="ios-settings"size={24} color="#DFD8C8"></Ionicons></Text>
