@@ -25,7 +25,9 @@ export default class Splash extends React.Component{
         </View>
         
         <ScrollView style={styles.scrollContainer}>
+        <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
           {notes}
+        </TouchableOpacity>
         </ScrollView>
 
         <View style={styles.footer}>

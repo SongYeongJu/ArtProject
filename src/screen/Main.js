@@ -51,10 +51,26 @@ class Main extends React.Component {
   const TabNavigator = createBottomTabNavigator({
     Home: Main,
     Tab2: Tab2,
-    Tab3: Tab3,
+    Tab3: {
+      screen: Tab3,
+      navigationOptions: {
+          tabBarIcon: ({ tintColor }) => (
+              <Ionicons
+                  name="ios-add-circle"
+                  size={48}
+                  color="#E9446A"
+                  style={{
+                      shadowColor: "#E9446A",
+                      shadowOffset: { width: 0, height: 10 },
+                      shadowRadius: 10,
+                      shadowOpacity: 0.3
+                  }}
+              />
+          )
+      }
+  },
     profile : Setting,
     Splashs: Splash,
-
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -65,8 +81,6 @@ class Main extends React.Component {
           iconName = "ios-home";
         } else if (routeName === "Tab2") {
           iconName = "ios-person";
-        } else if(routeName === "Tab3") {
-            iconName = "ios-person";
         } else if (routeName === "Splashs") {
           iconName = "ios-chatboxes";
         } else if (routeName === "profile") {
@@ -85,7 +99,8 @@ class Main extends React.Component {
       },
       tabBarOptions: {
         activeTintColor: "#74b9ff",
-        inactiveTintColor: "gray"
+        inactiveTintColor: "gray",
+        showLabel : false
       }
     })
   }

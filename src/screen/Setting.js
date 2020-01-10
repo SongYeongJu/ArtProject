@@ -16,9 +16,7 @@ class SettingsScreen extends React.Component {
       <SafeAreaView style={styles.container}>
           <ScrollView showsVerticalScrollIndicator={false}>
               <View style={styles.titleBar}>
-              <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
-                  <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
-              </TouchableOpacity>
+              <Ionicons name="ios-arrow-back" size={24} color="#52575D"></Ionicons>
               <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
                   <Ionicons name="ios-settings" size={24} color="#52575D"></Ionicons>
               </TouchableOpacity>

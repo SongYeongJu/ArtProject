@@ -24,7 +24,6 @@ const AppNavigator = createStackNavigator(
     Joins: Join,
     Mains : Main, 
     Settings : Setting, 
-    Loadings: Loading,
     ItemInfos : ItemInfo,
     UserListViews : UserListView,
     SettingListViews : SettingListView,
@@ -40,4 +39,3 @@ const AppNavigator = createStackNavigator(
   }
 );
 export default createAppContainer(AppNavigator);
-
