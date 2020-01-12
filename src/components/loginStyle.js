@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex:1,
     height: '100%',
     flexDirection : 'column',
-    backgroundColor : "#999999",
+    backgroundColor:'#333333',
   },
   items : {
     flex:1,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor : "#777777",
     marginHorizontal:15,
     marginVertical:5,
-    padding:1,
+    paddingHorizontal:15,
     borderRadius: 20,
   },
   submitButtonText: {
@@ -48,6 +48,19 @@ const styles = StyleSheet.create({
     width:"100%",
     resizeMode:"contain",
     justifyContent: 'center',
+  },
+  icon2: {
+    width:"50%",
+    resizeMode:"contain",
+    justifyContent: 'center',
+  },
+  loginButton : {
+    width:"100%",
+    backgroundColor:'#EE1122',
+  },
+  registerButton : {
+    width:"100%",
+    backgroundColor:'#EE1133',    
   },
   blank1 : {flex:1,},
   blank2 : {flex:2,},

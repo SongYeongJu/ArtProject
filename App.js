@@ -15,7 +15,7 @@ import notice from './src/screen/notice';
 import point from './src/screen/point';
 import help from './src/screen/help';
 import buy from './src/screen/Buy';
-
+import StartScreen from './src/screen/StartScreen';
 
 const AppNavigator = createStackNavigator(
   {
@@ -31,10 +31,11 @@ const AppNavigator = createStackNavigator(
     notices : notice,
     points : point,
     helps : help,
-    buys:buy,
+    buys : buy,
+    StartScreens : StartScreen,
   },
   { 
-    initialRouteName: 'Mains',
+    initialRouteName: 'StartScreens',
     headerMode : 'none',
   }
 );

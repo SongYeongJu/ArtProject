@@ -34,8 +34,8 @@ class Login extends Component{
           <TextInput 
             style={styles.input}
             onChangeText ={this.handleEmail}
-           // placeholder="  ID"
-            //placeholderTextColor="white"
+            placeholder="ID"
+            placeholderTextColor="white"
           />
           <View style={styles.blank1}/>
         </View>
@@ -45,8 +45,8 @@ class Login extends Component{
           <TextInput 
             style={styles.input}
             onChangeText ={this.handlePassword}
-            //secureTextEntry="true"
-            placeholder="  PW"
+            secureTextEntry="true"
+            placeholder="PW"
             placeholderTextColor="white"
           />
           <View style={styles.blank1}/>
@@ -55,7 +55,7 @@ class Login extends Component{
         <TouchableOpacity 
           style={styles.submitButtonText}
           onPress={() => this.login(this.state.user_id, this.state.user_pw)}>
-          <Text style={styles.submitButtonText}>Submit</Text>
+          <Text style={styles.submitButtonText}>Signed In</Text>
         </TouchableOpacity>
 
         <View style={styles.blank2}/>
