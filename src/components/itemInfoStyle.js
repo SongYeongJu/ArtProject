@@ -1,10 +1,23 @@
 import { StyleSheet, Dimensions } from "react-native";
 
+var imgSz;
+try {
+  imgSz=Dimensions.get('window').width;
+}catch(e){
+  imgSz=100;
+}
+
 const styles = StyleSheet.create({
     im: {
-      width: '100%',
-      height: '70%',
+      width: imgSz*0.9,
+      height: imgSz*0.9,
       backgroundColor:'#FFFFFF',
+      resizeMode:'contain',
+      marginVertical: '5%',
+    },
+    im2: {
+      width: imgSz * 0.9 / 2 * 0.95,
+      height: imgSz * 0.9 / 2 * 0.95,
       resizeMode:'contain',
       marginVertical: '5%',
     },
@@ -23,23 +36,59 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
     container: {
-      height: '100%',
-      width: '100%',
-      backgroundColor:'#FFFFFF',
+      width: imgSz,
+      justifyContent:'center',
+    },
+    scrollView: {
+      width: imgSz,
+      height:'100%',
+      marginHorizontal: 20,
     },
     container2: {
-      height: '20%',
-      width: '100%',
+      width: imgSz*0.9,
       alignItems:'center',
       backgroundColor:'#FFFFFF',
+      flexDirection:'column',
+      justifyContent:'flex-start',
+      marginBottom : 50,
      },
-     button: {
-      width: '100%',
+     container3: {
+      width: imgSz*0.9,
+      flexDirection:'row',
+      backgroundColor:'#FFFFFF',
+      justifyContent:'center',
+     },
+     recContainer:{
+      width: imgSz*0.9,
+      justifyContent:'space-between',
+     },
+     buttonBuy: {
+      width: imgSz*0.9 * 0.2,
       alignItems: 'center',
       backgroundColor: '#a9a9a9',
       padding: 10,
       width: 100,
       marginTop: 12,
+      margin: 10,
+    },
+    buttonCart: {
+      width: imgSz*0.9 * 0.2,
+      alignItems: 'center',
+      backgroundColor: '#EEEEEE',
+      padding: 10,
+      width: 100,
+      marginTop: 12,
+      margin: 10,
+    },
+    flatlist : {
+      width: imgSz*0.9,
+      paddingHorizontal : 5,
+    },
+    recomText : {
+      padding : 15,
+      textAlign:'center',
+      width: imgSz*0.9,
+      fontSize: 20,
     },
   });
   

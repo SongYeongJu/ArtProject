@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import moment from "moment";
 
 // temporary data until we pull from db
 const posts = [
