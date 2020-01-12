@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
       width: 100,
       marginTop: 12,
       margin: 10,
+      borderRadius: 5,
     },
     buttonCart: {
       width: imgSz*0.9 * 0.2,
@@ -79,6 +80,7 @@ const styles = StyleSheet.create({
       width: 100,
       marginTop: 12,
       margin: 10,
+      borderRadius: 5,
     },
     flatlist : {
       width: imgSz*0.9,
