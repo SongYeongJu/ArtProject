@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\구민석\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-moment
+  C:\Program Files\nodejs\node.exe C:\Users\구민석\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add reacat-native-pod
 
 PATH: 
   C:\Python27\;C:\Python27\Scripts;C:\Program Files\Java\jdk1.8.0_231\bin;C:\ProgramData\chocolatey\bin;C:\Windows\System32\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\구민석\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Windows\System32\;;C:\Users\구민석\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\구민석\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-native-moment: Not found
+  Error: https://registry.yarnpkg.com/reacat-native-pod: Not found
       at Request.params.callback [as _callback] (C:\Users\구민석\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66947:18)
       at Request.self.callback (C:\Users\구민석\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140665:22)
       at Request.emit (events.js:210:5)
