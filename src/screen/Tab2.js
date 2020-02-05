@@ -20,6 +20,9 @@ class Tab2 extends React.Component {
       }
       return (
         <View style={styles.container}>
+          <View style={styles.header}> 
+            <Image style={styles.headerImage} source={require('../image/color_logo.png')}/>
+          </View>
         <FlatList style={styles.container2}
             numColumns={3}
             columnWrapperStyle={{justifyContent:'space-between', }}

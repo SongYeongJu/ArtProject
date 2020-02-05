@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import React, {Component} from 'react';
 
 export default class SettingListView extends Component {
@@ -9,9 +9,9 @@ export default class SettingListView extends Component {
  
       <View style={styles.container}>
         
-        <View style={styles.header}>           
-               <Text style={styles.headerTitle}>Setting</Text>
-        </View>
+        <View style={styles.header}> 
+            <Image style={styles.headerImage} source={require('../image/color_logo.png')}/>
+          </View>
  
         <TouchableOpacity
           style={styles.button}
@@ -56,18 +56,24 @@ const styles = StyleSheet.create({
     height:'100%',
   },
   header: {
-    paddingTop: 64,
-    paddingBottom: 16,
+    width:'100%',
+    height: '13%',
+    paddingBottom:'2%',
     backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: "#EBECF4",
-    shadowColor: "#454D65",
-    shadowOffset: { height: 5 },
-    shadowRadius: 15,
-    shadowOpacity: 0.2,
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    // borderBottomWidth: 1,
+    // borderBottomColor: "#EBECF4",
+    // shadowColor: "#454D65",
+    // shadowOffset: { height: 5 },
+    // shadowRadius: 15,
+    // shadowOpacity: 0.2,
     zIndex: 10
+},
+headerImage : {
+  width: '100%',
+  height:'33%',
+  resizeMode:'contain',
 },
 headerTitle: {
     fontSize: 20,
@@ -77,19 +83,20 @@ headerTitle: {
       fontFamily: "HelveticaNeue",
       backgroundColor: '#00000000',
       width:"100%",
-      height:'100%',
       fontSize: 20,
       textAlign:'left',
       textAlignVertical:'center',
       alignContent:'center',
       alignItems:'center',
+      padding : 15,
   },
   button: {
     alignItems: 'center',
+    justifyContent:'center',
     backgroundColor: '#FFFFFF',
     width:"100%",
-    height:'10%',
-    marginVertical:'1%',
+    height:'8%',
+    marginVertical:'3%',
     textAlignVertical:'center',
     textAlign:'center',
   },
