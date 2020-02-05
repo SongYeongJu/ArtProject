@@ -30,20 +30,26 @@ const styles = StyleSheet.create({
       backgroundColor:'#EBECF4',
     },
     header: {
-      paddingTop: 64,
-      paddingBottom: 16,
+      width:'100%',
+      height: '13%',
+      paddingBottom:'2%',
       backgroundColor: "#FFF",
-      alignItems: "center",
-      justifyContent: "center",
-      borderBottomWidth: 1,
-      borderBottomColor: "#EBECF4",
-      shadowColor: "#454D65",
-      shadowOffset: { height: 5 },
-      shadowRadius: 15,
-      shadowOpacity: 0.2,
+      alignItems: "flex-end",
+      justifyContent: "flex-end",
+      // borderBottomWidth: 1,
+      // borderBottomColor: "#EBECF4",
+      // shadowColor: "#454D65",
+      // shadowOffset: { height: 5 },
+      // shadowRadius: 15,
+      // shadowOpacity: 0.2,
       zIndex: 10
   },
-  headerTitle: {
+  headerImage : {
+    width: '100%',
+    height:'33%',
+    resizeMode:'contain',
+  },
+headerTitle: {
       fontSize: 20,
       fontWeight: "500"
   },

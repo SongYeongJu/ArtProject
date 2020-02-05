@@ -23,22 +23,23 @@ class ItemInfo extends Component{
                     <Image 
                         style={styles.im}
                         source={{uri : item.uri}}/>
+                    <View style={styles.container2}>
+                        <Text style={styles.TitleText}>  {item.name} </Text>
+                        <Text style={styles.text2}>  [ Artist  {item.artist} ]  </Text>
+                        <Text style={styles.text2}>  {item.cost} 원</Text>  
+                        <Text style={styles.DescriptionText}>  설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명 </Text>  
+                    </View>
                     <View style={styles.container3}>
-                        <TouchableOpacity
-                            style={styles.buttonBuy}
-                            onPress={() => this.props.navigation.push('buys')}>
-                            <Text style={styles.text}>Buy</Text>
-                        </TouchableOpacity>
                         <TouchableOpacity
                             style={styles.buttonCart}
                             onPress={() => alert('장바구니에 상품이 담겼습니다.')}>
                             <Text style={styles.text}>Cart</Text>
                         </TouchableOpacity>
-                    </View>
-                    <View style={styles.container2}>
-                        <Text style={styles.TitleText}>  -- {item.name} -- </Text>
-                        <Text style={styles.text2}>  Artist  {item.artist}  </Text>
-                        <Text style={styles.text2}>  {item.cost} 원</Text>  
+                        <TouchableOpacity
+                            style={styles.buttonBuy}
+                            onPress={() => this.props.navigation.push('buys')}>
+                            <Text style={styles.text}>Buy</Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.recContainer}>
                         <Text style={styles.recomText}> 당신을 위한 추천작품 </Text>

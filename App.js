@@ -35,7 +35,7 @@ const AppNavigator = createStackNavigator(
     StartScreens : StartScreen,
   },
   { 
-    initialRouteName: 'StartScreens',
+    initialRouteName: 'Mains',
     headerMode : 'none',
   }
 );
