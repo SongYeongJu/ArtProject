@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Image, FlatList, TouchableOpacity, Text} from "react-native";
 import styles from "../components/flatlistStyle";
-import datas from '../datas/data1';
+import datas1 from '../datas/data1';
+import datas2 from '../datas/data2';
+import categorydatas from '../datas/category';
 
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -12,12 +14,18 @@ import Tab3 from './Tab3';
 import Setting from './Setting';
 import Splash from './Splash';
 
+let flatItem = datas1;
 class Main extends React.Component {
   _onPress = (item) => {
-//    alert("item : "+ item.key );
-    this.props.navigation.push('ItemInfos', {items:item});
+    //    alert("item : "+ item.key );
+        this.props.navigation.push('ItemInfos', {items:item});
+      }  
+  _onPressCate = (item) => {
+    // alert("item : "+ item.num);
+    if(item.num==1) flatItem=datas1;
+    else if(item.num==2) flatItem=datas2;
   }  
-    render() {
+                render() {
       try {
         styles.imgSz=Dimensions.get('window').width / 3 - Dimensions.get('window').width * 0.005 * 2;
       }catch(e){
@@ -28,10 +36,29 @@ class Main extends React.Component {
           <View style={styles.header}> 
             <Image style={styles.headerImage} source={require('../image/color_logo.png')}/>
           </View>
+          <FlatList style={styles.CategoryContainer}
+            numColumns={1}
+            data={categorydatas}
+            horizontal = {true}
+            renderItem={({ item }) => {
+              return (
+              <TouchableOpacity
+                onPress={() => this._onPressCate(item)}
+                style={styles.cateButton}
+              >
+                <Image 
+                  style={styles.categoryim} 
+                  source={{uri:item.uri}}/>
+                <Text style={styles.CategoryText}>{item.name}</Text>
+              </TouchableOpacity>  
+              );      
+            }
+          }
+        />
         <FlatList style={styles.container2}
             numColumns={3}
             columnWrapperStyle={{justifyContent:'space-between', }}
-            data={datas}
+            data={flatItem}
             renderItem={({ item }) => {
               return (
               <TouchableOpacity

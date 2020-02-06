@@ -7,18 +7,37 @@ try {
   imgSz=100;
 }
 const styles = StyleSheet.create({
-    im: {
-      width: imgSz,
-      height: imgSz,
-      backgroundColor:'#000000',
-      resizeMode:'cover',
-      marginBottom: '3.5%',
-    },
-    ttext :{
-      color:'#123123',
-      backgroundColor: '#FFFFFF',
-    },
-    items : {
+  im: {
+    width: imgSz,
+    height: imgSz,
+    backgroundColor:'#000000',
+    resizeMode:'cover',
+    marginBottom: '3.5%',
+  },
+  categoryim: {
+    width: 80,
+    height: 80,
+    backgroundColor:'#000000',
+    resizeMode:'cover',
+    margin: 5,
+    borderRadius: 60,
+    borderWidth:5,
+    borderColor:'#FFF',
+    borderStartWidth : 5,
+  },
+  ttext :{
+    color:'#123123',
+    backgroundColor: '#FFFFFF',
+  },
+  CategoryText :{
+    color:'#777',
+    backgroundColor: '#00000000',
+    textAlign:'center',
+    width:'100%',
+    height:20,
+    fontWeight: 'bold',
+  },
+  items : {
       height: '100%',
       width: '100%',
       flex: 0.33,
@@ -27,7 +46,7 @@ const styles = StyleSheet.create({
       height: '100%',
       width: '100%',
       //alignItems:'flex-start',
-      backgroundColor:'#EBECF4',
+      backgroundColor:'#FFF',
     },
     header: {
       width:'100%',
@@ -53,12 +72,25 @@ headerTitle: {
       fontSize: 20,
       fontWeight: "500"
   },
-    container2: {
-      height: '100%',
-      width: '100%',
-      marginLeft: '1%',
-      marginRight: '1%',
-     },
-  });
+  container2: {
+    height: '100%',
+    width: '100%',
+    marginLeft: '1%',
+    marginRight: '1%',
+    backgroundColor:'#FFF',
+   },
+   CategoryContainer: {
+    height: 160,
+    width: '100%',
+    marginBottom:10,
+    backgroundColor:'#DDD',
+   },
+   cateButton :{
+     width:100,
+     height:'100%',
+     alignItems:'center',
+     justifyContent:'center',
+   },
+});
   
 export default styles;
