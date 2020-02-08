@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from 'react-native-gesture-handler';
-
+import headerStyle from '../components/headerStyle';
 
 class SettingsScreen extends React.Component {
     _onPress = () => {
@@ -14,20 +14,13 @@ class SettingsScreen extends React.Component {
     render(){
   return (
       <View style={styles.container}>
-        <View style={styles.header}>
-               
-        <Text style={styles.headerTitle}></Text>
-        <Text style={styles.headerTitle}>    Porfile</Text>
-
-        <TouchableOpacity onPress={() => this.props.navigation.push('SettingListViews')}>
-        <Text style={styles.headerTitle}><Ionicons name="ios-settings"size={24} color="#DFD8C8"></Ionicons></Text>
-        </TouchableOpacity>
-
-        </View>
+         <View style={headerStyle.header}> 
+            <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
+          </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>
 
-              <View style={{ alignSelf: "center" }}>
+              <View style={{ alignSelf: "center", marginTop:5 }}>
                   <View style={styles.profileImage}>
                       <Image source={require("../image/jackson.jpg")} style={styles.image} resizeMode="center"></Image>
                   </View>

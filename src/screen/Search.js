@@ -54,13 +54,13 @@ export default class Tab2 extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#CCC",
+        backgroundColor: "#EBECF4",
       },
     header: {
       width:'100%',
       height: '13%',
       paddingTop:'5%',
-      backgroundColor: "#CCC",
+      backgroundColor: "#EBECF4",
       zIndex: 10
     },
     headerTitle: {

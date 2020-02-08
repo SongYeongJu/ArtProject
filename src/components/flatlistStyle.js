@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   categoryim: {
     width: 80,
     height: 80,
-    backgroundColor:'#000000',
+    backgroundColor:'#000',
     resizeMode:'cover',
     margin: 5,
     borderRadius: 60,
@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
     height: 160,
     width: '100%',
     marginBottom:10,
-    backgroundColor:'#DDD',
-   },
+    backgroundColor: "#EBECF4",
+  },
    cateButton :{
      width:100,
      height:'100%',
