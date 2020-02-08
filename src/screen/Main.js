@@ -4,15 +4,16 @@ import styles from "../components/flatlistStyle";
 import datas1 from '../datas/data1';
 import datas2 from '../datas/data2';
 import categorydatas from '../datas/category';
+import headerStyle from '../components/headerStyle';
 
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 
-import Tab2 from './Tab2';
-import Tab3 from './Tab3';
+import Search from './Search';
 import Setting from './Setting';
-import Splash from './Splash';
+import Feed from './Feed';
+import Tab3 from './Tab3';
 
 let flatItem = datas1;
 class Main extends React.Component {
@@ -33,8 +34,8 @@ class Main extends React.Component {
       }
       return (
         <View style={styles.container}>
-          <View style={styles.header}> 
-            <Image style={styles.headerImage} source={require('../image/color_logo.png')}/>
+          <View style={headerStyle.header}> 
+            <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
           </View>
           <FlatList style={styles.CategoryContainer}
             numColumns={1}
@@ -80,7 +81,7 @@ class Main extends React.Component {
   
   const TabNavigator = createBottomTabNavigator({
     Home: Main,
-    Tab2: Tab2,
+    Search: Search,
     Tab3: {
       screen: Tab3,
       navigationOptions: {
@@ -97,10 +98,10 @@ class Main extends React.Component {
                   }}
               />
           )
-      }
-  },
+        }
+      },
+    Feed: Feed,
     profile : Setting,
-    Splashs: Splash,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -109,9 +110,9 @@ class Main extends React.Component {
         let iconName;
         if (routeName === "Home") {
           iconName = "ios-home";
-        } else if (routeName === "Tab2") {
+        } else if (routeName === "Search") {
           iconName = "ios-person";
-        } else if (routeName === "Splashs") {
+        } else if (routeName === "Feed") {
           iconName = "ios-chatboxes";
         } else if (routeName === "profile") {
           iconName = "ios-person";

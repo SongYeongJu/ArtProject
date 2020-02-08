@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import moment from "moment";
+import headerStyle from '../components/headerStyle';
 
 // temporary data until we pull from db
 const posts = [
@@ -72,10 +73,9 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.header}>
-                    <Text style={styles.headerTitle}>Feed</Text>
+                <View style={headerStyle.header}> 
+                    <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
                 </View>
-
                 <FlatList
                     style={styles.feed}
                     data={posts}
@@ -94,22 +94,24 @@ const styles = StyleSheet.create({
         backgroundColor: "#EBECF4"
     },
     header: {
-        paddingTop: 64,
-        paddingBottom: 16,
+        width:'100%',
+        height: '13%',
+        paddingBottom:'2%',
         backgroundColor: "#FFF",
-        alignItems: "center",
-        justifyContent: "center",
-        borderBottomWidth: 1,
-        borderBottomColor: "#EBECF4",
-        shadowColor: "#454D65",
-        shadowOffset: { height: 5 },
-        shadowRadius: 15,
-        shadowOpacity: 0.2,
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+        // borderBottomWidth: 1,
+        // borderBottomColor: "#EBECF4",
+        // shadowColor: "#454D65",
+        // shadowOffset: { height: 5 },
+        // shadowRadius: 15,
+        // shadowOpacity: 0.2,
         zIndex: 10
     },
-    headerTitle: {
-        fontSize: 20,
-        fontWeight: "500"
+    headerImage : {
+      width: '100%',
+      height:'33%',
+      resizeMode:'contain',
     },
     feed: {
         marginHorizontal: 16

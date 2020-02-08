@@ -1,10 +1,8 @@
 import React from 'react';
-import { View, Image, FlatList, TouchableOpacity} from "react-native";
+import { View, Image, FlatList, TouchableOpacity, Text} from "react-native";
 import styles from "../components/flatlistStyle";
 import datas from '../datas/data3';
-
-import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { createAppContainer } from 'react-navigation';
+import headerStyle from '../components/headerStyle';
 
 class Tab3 extends React.Component {
   _onPress = (item) => {
@@ -19,9 +17,10 @@ class Tab3 extends React.Component {
       }
       return (
         <View style={styles.container}>
-          <View style={styles.header}> 
-            <Image style={styles.headerImage} source={require('../image/color_logo.png')}/>
+          <View style={headerStyle.header}> 
+            <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
           </View>
+          <Text style={styles.textForU}> 당신을 위한 추천 작품들 </Text>
         <FlatList style={styles.container2}
             numColumns={3}
             columnWrapperStyle={{justifyContent:'space-between', }}
