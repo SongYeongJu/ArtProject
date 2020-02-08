@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from 'react-native-gesture-handler';
+
 import headerStyle from '../components/headerStyle';
 
 class SettingsScreen extends React.Component {
@@ -9,13 +10,19 @@ class SettingsScreen extends React.Component {
         //    alert("item : "+ item.key );
         this.props.navigation.push('UserListViews');
     }  
+    _onPressSettingButton = () => {
+        this.props.navigation.push('SettingListViews');
+    }  
     
                 
     render(){
   return (
       <View style={styles.container}>
-         <View style={headerStyle.header}> 
-            <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
+         <View style={headerStyle.header2}> 
+            <Image style={headerStyle.headerImage2} source={require('../image/color_logo.png')}/>
+            <TouchableOpacity style={headerStyle.settingButton} onPress={() => this._onPressSettingButton()}>
+                <Image style={headerStyle.settingButtonImage} source={require('../image/setting.png')}/>
+            </TouchableOpacity>
           </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>
