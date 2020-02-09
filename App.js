@@ -14,7 +14,8 @@ import point from './src/screen/point';
 import help from './src/screen/help';
 import buy from './src/screen/Buy';
 import StartScreen from './src/screen/StartScreen';
-import Chat from './src/screen/Chat';
+import Feed from './src/screen/Feed';
+import Chats from './src/screen/Chat';
 
 const AppNavigator = createStackNavigator(
   {
@@ -31,7 +32,8 @@ const AppNavigator = createStackNavigator(
     helps : help,
     buys : buy,
     StartScreens : StartScreen,
-    Chat : Chat,
+    Chat : Chats,
+    Feed : Feed,
   },
   { 
     initialRouteName: 'Mains',

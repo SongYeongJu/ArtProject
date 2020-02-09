@@ -10,7 +10,7 @@ import styles from '../components/feedStyle';
 export default class FeedScreen extends React.Component {
     _onPress = () => {
         this.props.navigation.push('Chat');
-    }  
+    }
 
     renderPost = post => {
         return (
@@ -47,7 +47,7 @@ export default class FeedScreen extends React.Component {
                 <TouchableOpacity style={styles.cateButton}>
                         <Text style={styles.cateText}>Posts</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.cateButton} onPress={this._onPress()} >
+                    <TouchableOpacity style={styles.cateButton} onPress={() => this._onPress()}>
                         <Text style={styles.cateText}>Chat</Text>
                     </TouchableOpacity>
                 </View>
