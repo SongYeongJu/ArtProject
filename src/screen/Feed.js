@@ -8,6 +8,10 @@ import styles from '../components/feedStyle';
 
 // temporary data until we pull from db
 export default class FeedScreen extends React.Component {
+    _onPress = () => {
+        this.props.navigation.push('Chat');
+    }  
+
     renderPost = post => {
         return (
           //  <Text style={styles.timestamp}>{moment(post.timestamp).fromNow()}</Text> Line 56
@@ -43,7 +47,7 @@ export default class FeedScreen extends React.Component {
                 <TouchableOpacity style={styles.cateButton}>
                         <Text style={styles.cateText}>Posts</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.cateButton}>
+                    <TouchableOpacity style={styles.cateButton} onPress={this._onPress()} >
                         <Text style={styles.cateText}>Chat</Text>
                     </TouchableOpacity>
                 </View>
