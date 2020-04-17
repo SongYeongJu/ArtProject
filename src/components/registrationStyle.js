@@ -103,16 +103,34 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     paddingVertical: 12
   },
-  imageUpload: {
-    width: windowSize * 0.7,
-    height: 140,
-    borderStyle: 'dashed',
-    borderColor: '#E9446A',
-    borderWidth: 3,
+  uploadButtonText: {
+    fontSize: 20,
+    width:'100%',
+    height:'100%',
+    color:'#FFFFFF',
+    fontWeight: 'bold',
+    textAlignVertical:'center',
+    textAlign:'center'
+  },
+  uploadButton: {
+    width: 200,
+    height: 50,
+    backgroundColor: '#E9446A',
     borderRadius: 15,
     alignItems:'center',
     justifyContent:'center',
     paddingVertical: 12
+  },
+  imageUpload: {
+    minWidth: windowSize * 0.7,
+    minHeight: windowSize * 0.7,
+    borderRadius: 15,
+    alignItems:'center',
+    justifyContent:'center',
+    paddingVertical: 12,
+    resizeMode: 'cover',
+    marginBottom: 20,
+    backgroundColor: '#FFDBE4'
   }
 });
 

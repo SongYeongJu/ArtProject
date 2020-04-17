@@ -1,19 +1,53 @@
 import React from 'react';
 import { View, Image, ScrollView, TouchableOpacity, Text, TextInput} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import * as ImagePicker from 'expo-image-picker';
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 import styles from "../components/registrationStyle";
 import headerStyle from '../components/headerStyle';
 
 class Tab3 extends React.Component {
   constructor(props) {
     super(props);
-    this.state={title: '', artist: '', cost: '', description: ''};
+    this.state={title: '', artist: '', cost: '', description: '', image: 'null'};
   }
 
   _onPress = () => {
     alert('작품을 등록했습니다.');
     this.props.navigation.push('Mains');
+  };
+
+  
+  componentDidMount() {
+    this.getPermissionAsync();
   }
+
+  getPermissionAsync = async () => {
+    if (Constants.platform.ios) {
+      const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+      if (status !== 'granted') {
+        alert('Sorry, we need camera roll permissions to make this work!');
+      }
+    }
+  };
+
+  _pickImage = async () => {
+    try {
+      let result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: true,
+        quality: 1,
+      });
+      if (!result.cancelled) {
+        this.setState({ image: result.uri });
+      }
+
+      console.log(result);
+    } catch (E) {
+      console.log(E);
+    }
+  };
 
   render() {
     return (
@@ -22,15 +56,12 @@ class Tab3 extends React.Component {
           <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
         </View>
         <ScrollView style={styles.scrollView}>
-          <View style={styles.container7}>
+          <View style={{alignItems: 'center', justifyContent: 'center', marginBottom: 40}}>
+            <Image style={styles.imageUpload} source={{uri: this.state.image}}/>
             <TouchableOpacity
-              style={styles.imageUpload}
-              onPress={() => this._onPress()}>
-              <MaterialCommunityIcons
-                name={'image-plus'}
-                size={100}
-                color="#E9446A"
-              />
+              style={styles.uploadButton}
+              onPress={() => this._pickImage()}>
+              <Text style={styles.uploadButtonText}>Image Upload</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.container2}>
@@ -81,39 +112,6 @@ class Tab3 extends React.Component {
         </ScrollView>
       </View>
     );
-    /*
-    try {
-      styles.imgSz=Dimensions.get('window').width / 3 - Dimensions.get('window').width * 0.005 * 2;
-    } catch(e) {
-      styles.imgSz=100;
-    }
-
-    return (
-      <View style={styles.container}>
-        <View style={headerStyle.header}> 
-          <Image style={headerStyle.headerImage} source={require('../image/color_logo.png')}/>
-        </View>
-        <Text style={styles.textForU}> 당신을 위한 추천 작품들</Text>
-        <FlatList style={styles.container2}
-          numColumns={3}
-          columnWrapperStyle={{justifyContent:'space-between', }}
-          data={datas}
-          renderItem={({ item }) => {
-            return (
-              <TouchableOpacity
-              onPress={() => this._onPress(item)}
-              >
-                  <Image 
-                    style={styles.im} 
-                    source={{uri:item.uri}}/>
-                    </TouchableOpacity>  
-              );      
-            }
-          }
-        />
-      </View>
-    );
-    */
   }
 }
 
