@@ -24,10 +24,10 @@ class ItemInfo extends Component{
                         style={styles.im}
                         source={{uri : item.uri}}/>
                     <View style={styles.container2}>
-                        <Text style={styles.TitleText}>  {item.name} </Text>
-                        <Text style={styles.text2}>  [ Artist  {item.artist} ]  </Text>
-                        <Text style={styles.text2}>  {item.cost} 원</Text>  
-                        <Text style={styles.DescriptionText}>  설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명설명 설명 설명 설명 설명 설명 </Text>  
+                        <Text style={styles.TitleText}>{item.name} </Text>
+                        <Text style={styles.text2}>[ Artist: {item.artist} ]  </Text>
+                        <Text style={styles.text2}>{item.cost} 원</Text>  
+                        <Text style={styles.DescriptionText}>{item.des}</Text>  
                     </View>
                     <View style={styles.container3}>
                         <TouchableOpacity

@@ -1,20 +1,10 @@
-const data=[
-  {key: 'Devin212', uri : 'https://previews.123rf.com/images/ezarubina/ezarubina1603/ezarubina160300036/54859716-%EB%8B%A4%EC%B1%84%EB%A1%9C%EC%9A%B4-%EB%B0%9D%EC%9D%80-%EC%BA%94%EB%B2%84%EC%8A%A4-%EC%9C%A0%ED%99%94-%EB%B0%B0%EA%B2%BD.jpg' , cost : '1002', artist : 'song', name : 'pic1'},
-  {key: 'Devin312', uri : 'https://pds.joins.com/news/component/htmlphoto_mmdata/200610/htm_20061001204644a000a700-001.JPG' , cost : '1003', artist : 'song', name : 'pic1'},
-  {key: 'Devin412', uri : 'https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4qwQ/image/FOO-hJbzaBk97hiv5tcPdDhGHiI.png' , cost : '1004', artist : 'song', name : 'pic1'},
-  {key: 'Devin512', uri : 'http://www.artandyou.wdw.kr/data/editor/1811/db760d4da94063635b1f3ee076abfac8_1542804498_5733.jpg' , cost : '1005', artist : 'song', name : 'pic1'},
-  {key: 'Devin612', uri : 'https://pbs.twimg.com/media/DNvySYwUMAAJyYN.jpg' , cost : '1006', artist : 'song', name : 'pic1'},
-  {key: 'Devin712', uri : 'http://static.hubzum.zumst.com/hubzum/2017/02/22/08/24ad8502f6b64c649b310724f0b95026_780x0c.jpg' , cost : '1007', artist : 'song', name : 'pic1'},
-  {key: 'Devin812', uri : 'https://img1.yna.co.kr/etc/inner/KR/2016/02/22/AKR20160222123600005_01_i_P4.jpg' , cost : '1008', artist : 'song', name : 'pic1'},
-  {key: 'Devin112', uri : 'http://www.gjtline.kr/news/photo/201902/12416_20332_4335.jpg' , cost : '1001', artist : 'song', name : 'pic1'},
-  {key: 'Devin22', uri : 'https://previews.123rf.com/images/ezarubina/ezarubina1603/ezarubina160300036/54859716-%EB%8B%A4%EC%B1%84%EB%A1%9C%EC%9A%B4-%EB%B0%9D%EC%9D%80-%EC%BA%94%EB%B2%84%EC%8A%A4-%EC%9C%A0%ED%99%94-%EB%B0%B0%EA%B2%BD.jpg' , cost : '1002', artist : 'song', name : 'pic1'},
-  {key: 'Devin32', uri : 'https://pds.joins.com/news/component/htmlphoto_mmdata/200610/htm_20061001204644a000a700-001.JPG' , cost : '1003', artist : 'song', name : 'pic1'},
-  {key: 'Devin42', uri : 'https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4qwQ/image/FOO-hJbzaBk97hiv5tcPdDhGHiI.png' , cost : '1004', artist : 'song', name : 'pic1'},
-  {key: 'Devin52', uri : 'http://www.artandyou.wdw.kr/data/editor/1811/db760d4da94063635b1f3ee076abfac8_1542804498_5733.jpg' , cost : '1005', artist : 'song', name : 'pic1'},
-  {key: 'Devin62', uri : 'https://pbs.twimg.com/media/DNvySYwUMAAJyYN.jpg' , cost : '1006', artist : 'song', name : 'pic1'},
-  {key: 'Devin72', uri : 'http://static.hubzum.zumst.com/hubzum/2017/02/22/08/24ad8502f6b64c649b310724f0b95026_780x0c.jpg' , cost : '1007', artist : 'song', name : 'pic1'},
-  {key: 'Devin82', uri : 'https://img1.yna.co.kr/etc/inner/KR/2016/02/22/AKR20160222123600005_01_i_P4.jpg' , cost : '1008', artist : 'song', name : 'pic1'},
-  {key: 'Devin12', uri : 'http://www.gjtline.kr/news/photo/201902/12416_20332_4335.jpg' , cost : '1001', artist : 'song', name : 'pic1'},
+const data = [
+  {key: 'Devin8', uri: 'http://www.dygallery.co.kr/data/goods/m/2730_15173659891.jpg', cost: '175만', artist: '이완호', name: '한려수도', des: ''},
+  {key: 'Devin9', uri: 'https://d2ceo6ilwei9nc.cloudfront.net/www/Work/0124/T/M0124301001.jpg', cost: '120만', artist: '운보 김기창', name: '봉래선경 蓬萊仙境', des: '1982, 종이에 수묵채색, 45×37cm'},
+  {key: 'Devin10', uri: 'http://www.dygallery.co.kr/data/goods/m/2444_15916085861.jpg', cost: '29만', artist: '청원 김환중', name: '사사유여', des: '홍송원목 짜맞춤 / 이중입체식 전통방식 고급표구'},
+  {key: 'Devin11', uri: 'http://www.dygallery.co.kr/data/goods/m/2661_14528286891.jpg', cost: '265만', artist: '당산 임기만', name: '무제', des: '현대판 솔거 선생이라고 불리는 당산 임기만 선생 작품입니다.'}
 ];
-  
-  export default data;
+
+/*{key: 'Devin', uri: '', cost: '', artist: '', name: '', des: ''}*/
+
+export default data;
